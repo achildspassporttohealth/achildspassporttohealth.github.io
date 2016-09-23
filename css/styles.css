@@ -203,6 +203,15 @@ a.cta:hover {
 }
 */
 
+.memorium .caption {
+	margin-top: 300px;
+	margin-bottom: 10px;
+	font-size: .9em;
+	font-weight: bold;
+	white-space: nowrap;
+	color: #e7a614;
+}
+
 .news {
 	position: relative;
 }
