@@ -118,15 +118,21 @@ article { padding: 60px 20px 10px 20px; }
 .partner_container .partner.one .content { padding: 170px 10px 0 0; }
 .partner_container .partner.two .content { padding: 280px 10px 0 0; }
 
+.kids_container {
+	width: 250px;
+	height: 250px;
+	display: block;
+	float: left;
+}
+/*
 .kids_container { padding: 0; }
 .kids_container .kids {
-	/*height: 25px;*/
-	height: 10%;
+	width: 33%;
 	float: left;
 	background-position: 0px 3px;
 }
+*/
 
-.kids_container .kids .content { padding: 0; }
 .kids_container .kids.one .content { padding: 170px 10px 0 0; }
 .kids_container .kids.two .content { padding: 170px 10px 0 0; }
 .kids_container .kids.three .content { padding: 170px 10px 0 0; }
