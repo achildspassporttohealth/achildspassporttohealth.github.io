@@ -119,10 +119,14 @@ article { padding: 60px 20px 10px 20px; }
 .partner_container .partner.two .content { padding: 280px 10px 0 0; }
 
 .kids_container {
-	width: 250px;
-	height: 250px;
 	display: block;
+}
+.kids_container .kids {
+	width: 250px;
+	min-height: 250px;
 	float: left;
+	position: relative;
+	margin: 10px;
 }
 /*
 .kids_container { padding: 0; }
