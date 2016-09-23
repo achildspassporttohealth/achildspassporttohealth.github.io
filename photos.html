@@ -320,6 +320,12 @@ function display_albums()
 			var coverphotoid = aobj.cover_photo.id;
 		var count = aobj.count;
 		var name = aobj.name;
+		// don't display the following albums
+		if (
+			(name !== "PARTNERS IN HEART") &&
+			(name !== "MEET OUR VOLUNTEERS") &&
+			(name !== "Profile Pictures")
+		)
 		if (count > 0)
 		{
 			html += "<div class='album_container'>\n";
