@@ -107,6 +107,21 @@ a.cta:hover {
 .partner.one { background-image: url(../images/ninos_logo.jpg); background-size: 200px;}
 .partner.two { background-image: url(../images/GabrielaMaldonado.jpg); background-size: 200px;}
 
+.kids h3 { font-size: 1.1em; margin: 0; }
+.kids p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
+
+.kids { background-repeat: no-repeat; }
+
+.kids.one { background-image: url(../images/Israel\ Ecuador\ 2016.jpg); background-size: 200px;}
+.kids.two { background-image: url(../images/Nocole\ Philipines.jpg); background-size: 200px;}
+.kids.three { background-image: url(../images/P900016.JPG); background-size: 200px;}
+.kids.four { background-image: url(../images/SV102991.JPG); background-size: 200px;}
+.kids.five { background-image: url(../images/Stepanies\ Child\ Hearing\ aid.jpg); background-size: 200px;}
+.kids.six { background-image: url(../images/web..jpg); background-size: 200px;}
+.kids.seven { background-image: url(../images/web.jpg); background-size: 200px;}
+.kids.eight { background-image: url(../images/webpic.JPG); background-size: 200px;}
+.kids.nine { background-image: url(../images/child_green_dress.JPG); background-size: 200px;}
+
 .donate h3 { font-size: 1.1em; margin: 0; }
 .donate p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
 
