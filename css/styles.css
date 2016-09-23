@@ -99,6 +99,14 @@ a.cta:hover {
 .board.four { background-image: url(../images/ShannonJacobs_medium.jpg); }
 .board.five { background-image: url(../images/NancyBartley_medium.jpg); }
 
+.partner h3 { font-size: 1.1em; margin: 0; }
+.partner p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
+
+.partner { background-repeat: no-repeat; }
+
+.partner.one { background-image: url(../images/ninos_logo.jpg); background-size: 200px;}
+.partner.two { background-image: url(../images/GabrielaMaldonado.jpg); background-size: 200px;}
+
 .donate h3 { font-size: 1.1em; margin: 0; }
 .donate p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
 
