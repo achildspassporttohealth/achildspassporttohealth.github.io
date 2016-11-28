@@ -77,7 +77,7 @@ nav a:hover { color:#fff; background-color: rgba(255,255,255,.15); }
 }
 .donate_container .donate .content { padding: 0 20px 5px 90px; }
 
-.staff_container { padding: 0; }
+.staff_container { padding: 0; width:100%; margin:0;}
 .staff_container .staff {
 	width: auto;
 	float: none;

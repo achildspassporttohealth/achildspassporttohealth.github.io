@@ -57,7 +57,7 @@ nav a { margin-right: 20px; }
 .promo_container .promo { background-position: 0 0; }
 .promo_container .promo .content { padding: 70px 30px 0 0; }
 
-.staff_container { padding: 0 20px 15px 20px; }
+.staff_container { padding: 0 20px 15px 20px; width:500px;}
 .staff_container .staff { background-position: 0 0; }
 .staff_container .staff .content { padding: 70px 30px 0 0; }
 
