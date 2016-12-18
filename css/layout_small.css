@@ -137,6 +137,18 @@ nav a:hover { color:#fff; background-color: rgba(255,255,255,.15); }
 .board .caption {
 	margin-top: 180px;
 }
+.partner {
+	.partner img { width: 100px; }
+	width: 90%;
+	margin: 10px;
+	padding: 10px;
+}
+
+.partner .table {display: block;}
+.partner .row {display: table; width: 100%; }
+.partner .cell { display: table-row;}
+.partner .innercell { display: table-cell; }
+.partner .innercell img { margin-bottom: 10px; }
 
 /*h1 {font-size: 1.5em; font-weight: normal; color: #a6430a; margin: 0 0 .5em 0; }*/
 h1 {font-size: 1.5em; font-weight: normal; color: #9c5708; margin: 0 0 .5em 0; }

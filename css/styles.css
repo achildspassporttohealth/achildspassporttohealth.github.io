@@ -103,13 +103,25 @@ a.cta:hover {
 .board.eight { background-image: url(../images/JenniferRinald_medium.png); }
 .board.nine { background-image: url(../images/Allison_medium.png); }
 
-.partner h3 { font-size: 1.1em; margin: 0; }
-.partner p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
+.partner_container { padding: 0; }
+.partner {
+	margin: 20px;
+	padding: 15px;
+	border: 1px solid #5d87a1;
+}
+.partner img { width: 200px; }
 
-.partner { background-repeat: no-repeat; }
+.partner .table {display: table;}
+.partner .row {display: table-row;}
+.partner .cell {display: table-cell; padding: 5px; vertical-align: top;}
 
-.partner.one { background-image: url(../images/ninos_logo.jpg); background-size: 200px;}
-.partner.two { background-image: url(../images/GabrielaMaldonado.jpg); background-size: 200px;}
+.center { text-align: center; }
+
+.ui-corner-all {
+   -moz-border-radius: 15px;
+   -webkit-border-radius: 15px;
+   border-radius: 15px;
+}
 
 .kids h3 { font-size: 1.1em; margin: 0; }
 .kids p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }

@@ -74,3 +74,9 @@ nav a { margin-right: 20px; }
 .volunteer.five { background-image: url(../images/MaisieThompson_medium.jpg) }
 
 body { background-image: none; }
+.partner {
+	.partner img { width: 150px; }
+	width: 90%;
+	margin: 10px;
+	padding: 10px;
+}
