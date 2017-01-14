@@ -93,6 +93,7 @@ a.cta:hover {
 .board p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
 
 .board { background-repeat: no-repeat; margin-bottom: .9em;}
+.board.zero { background-image: url(../images/board2_large.jpg); }
 .board.one { background-image: url(../images/TerryMartaus_medium.jpg); }
 .board.two { background-image: url(../images/CoryHansen_medium.jpg); }
 .board.three { background-image: url(../images/RebeccaSnyders_medium.jpg); }
@@ -202,6 +203,14 @@ a.cta:hover {
 	position: relative;
 	margin: 0 10px 30px 0;
 	/*background: url(../images/board2_large.jpg) no-repeat left 0px;*/
+}
+
+.board.zero {
+	float: clear;
+	height: 175px;
+	text-align:center;
+	width:100%;
+	background-position: center center;
 }
 
 .board .caption {
