@@ -18,6 +18,6 @@ var pageid = "1687150331514073";
 //var accesstoken = "EAAJF9t0Lm18BAMZAeiuIZBNuA9GIQZBFBkbXcjSzJjbisoyodmX9XaWGlfeZAZCFZAywSAhaQ5HJGZATVchlM8tZBLZCG9gx7i73M4f9QKDUMFV4PyZBEzg0z6RONNgtCgVu1bwTVQZCw8joU5TFPbvcC726j5cTR7oKZBcZD";
 //var expires = "1497538800";
 
-// expires October 24th, 2017
+// expires October 24th, 2017 - edited by vince
 var accesstoken = "EAAJF9t0Lm18BAFdUkPV9h274VQBlnfXR5FLQKDeBZAZA0UQA3EsrQ7VR4N7dK2cipAEtPBxqLkJ2ZCta9bQUVKhFYSufkXR1JvOaTSsL8AKgZBWvmlMMyrwtWSnw3SbTFURcHrHFl65KldbPzn9pmbobZAyDO4jgAIj55guZAN2AZDZD";
 var expires = "1503687600";
