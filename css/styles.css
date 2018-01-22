@@ -72,9 +72,9 @@ a.cta:hover {
 .staff.four { background-image: url(../images/promo_1.jpg); }
 
 .memorium h3 { font-size: 1.1em; margin: 0; }
-.memorium p { line-height: 1.2em; font-size: .9em; margin-bottom: .5em; }
+.memorium p { line-height: 1.2em; font-size: .9em; margin-bottom: 1.0em; }
 
-.memorium { background-repeat: no-repeat; margin-bottom: .9em;}
+.memorium { background-repeat: no-repeat; margin-bottom: 1.4em;}
 .memorium.one { background-image: url(../images/JoAnn_large.jpg) }
 .memorium.two { background-image: url(../images/steph_large.jpg) }
 .memorium.three { background-image: url(../images/paul_large.jpg) }
