@@ -5,6 +5,15 @@
 	<meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
 	<title>A Childs Passport To Health</title>
 
+	<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+	<script src="https://www.google.com/jsapi"></script>
+
+	<script src="scripts/jqdump.js"></script>
+	<script src="scripts/dateFormat.js"></script>
+	<script src="scripts/fbaccess.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css" />
 	<link rel="stylesheet" type="text/css" href="css/layout.css" />
 	<link rel="stylesheet" type="text/css" href="css/layout_small.css" media="only screen and (min-width:50px) and (max-width:600px)" />
@@ -12,6 +21,35 @@
 	<!--[if lt ID 9]>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
 	<![endif]-->
+
+<style>
+.newsbutton {
+    display: block;
+    width: 120px;
+    height: 25px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+	margin-left:auto;margin-right:auto;margin-top:10px;font-size:14pt;
+}
+
+.hasnews {
+	display:block-inline;
+	width:200px;
+	height:100px;
+	margin-bottom:20px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	background:#00958F;
+	color:#ffb035;
+	padding:10px;
+	font-size:18pt;
+}
+</style>
 </HEAD>
 <BODY>
 <div class=page>
@@ -20,6 +58,9 @@
 	</header>
 
 	<article>
+
+	<div id="newnews"></div>
+
 	<h1>A Child's Passport To Health</h1>
 	<div class="home"></div><p>
 	Every day children around the world suffer and die from health conditions that could be treated, if only they had access to the medical care they need. But what if they could be connected to that care and brought to a place where everything they need is provided by the generosity of donors? What a difference it would make in the lives of these children!
@@ -71,10 +112,55 @@
 		<a href="services.html">services</a>
 		<a href="donate.html">donate</a>
 		<a href="photos.html">photos</a>
+		<a href="reports.html">reports</a>
 	</nav>
 	<footer>
 		&copy; A Child's Passport To Health
 	</footer>
 </div>
+
+<script>
+
+if (!Date.now) {
+    Date.now = function() { return new Date().getTime(); }
+}
+
+function getNewNews()
+{
+
+	//use Date to figure out what the date was 14 days ago
+	var newsCutoff = new Date();
+	newsCutoff.setDate(newsCutoff.getDate() - 14);
+	var d = Math.floor(newsCutoff.getTime() / 1000);
+
+	// query facebook trhough Graph API to find post within the last 14 days
+	url   = "https://graph.facebook.com/" + pageid + "/feed";
+	url  += "?access_token=" + accesstoken;
+	url  += "&expires=" + expires;
+	url  += "&since=" + d;
+
+	$.ajax({
+                url: url,
+                type: "GET",
+                dataType: "jsonp"
+         })
+        .done(function( dataret ) {
+		if (dataret.data.length > 0)
+		{
+			$("#newnews").addClass("hasnews");
+			$("#newnews").append("Something new has been posted.<BR><a class='newsbutton' href='news.html'>READ NOW</a>");
+		}
+        })
+        .error(function(jqXHR, msg, err) {
+                alert("getNewNews failed");
+                return false;
+        });
+	return false;
+}
+
+$(document).ready(function() {
+	getNewNews();
+});
+</script>
 </BODY>
 </HTML>
