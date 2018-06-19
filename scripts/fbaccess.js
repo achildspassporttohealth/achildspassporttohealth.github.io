@@ -40,6 +40,5 @@ var pageid = "1687150331514073";
 //var expires = "1522281600";
 
 // expires August 18th, 2018 - edited by vince
-good through 
 var accesstoken = "EAAJF9t0Lm18BACAdzhCePL1jxpv0S38OVDScgomdQ98G2IApQnkG4dabOQmrh0UI9LZBu9QQJasqrDETB8v4ctR1MF5a1GEswTln2Fo77ZChR7hQXpNyikU2hPKtXXqSD2MBW6IZBrLoCyG6gXghNVdX3a90UWYGOkLoX14aAZDZD";
 var expires = "1529384400";
