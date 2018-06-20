@@ -63,7 +63,7 @@ String.prototype.replaceAll = function(search, replacement) {
 function getCP2HPosts()
 {
 
-	fields="id,name,message,story,updated_time,type,status_type,link,picture";
+	fields="id,name,message,story,updated_time,type,status_type,link,picture,full_picture";
 
 	url   = "https://graph.facebook.com/" + pageid + "/feed";
 	url  += "?access_token=" + accesstoken;
@@ -84,48 +84,65 @@ function getCP2HPosts()
 			$(data).each(function(idx, dobj) {
 				{
 					if (idx > 0)
-						html += "<HR>\n";
+					{
+						//html += "\t<p style='clear:both;'></p>\n";
+						html += "\t<p style='clear:both;'></p>\n";
+						html += "\t<HR>\n";
+					}
+					html += "\t<p align='left'>\n";
+
+					if (dobj.link && (dobj.type == "photo" || dobj.type == "link"))
+					{
+						if (dobj.picture && dobj.status_type !== "shared_story")
+						{
+							if (dobj.full_picture)
+								picture = "<img class='newsfeedimg' align='left' src='"+dobj.full_picture+"'>";
+							else
+								picture = "<img class='newsfeedimg' align='left' src='"+dobj.picture+"'>";
+						}
+						else if (dobj.name)
+							picture = dobj.name;
+						else
+							picture = "picture link";
+						html += "\t\t<a target='_blank' href='"+dobj.link+"'>" + picture + "</a>\n";
+					}
+					html += "\t</p>\n";
+
+					html += "\t<BR class='imgsep'>\n";
+
 					if (dobj.updated_time)
 					{
 						var mydt = dobj.updated_time.substr(0, dobj.updated_time.indexOf('+'));
 						var dt = new Date(mydt);
-						html += "<span class='postdate'>Posted: " + dt.toString() + "</span>\n";
+						html += "\t\t<p class='postdate'>Posted: " + dt.toString() + "</p>\n";
 					}
 					else if (dobj.created_time)
 					{
 						var mydt = dobj.created_time.substr(0, dobj.created_time.indexOf('+'));
 						var dt = new Date(mydt);
-						html += "<span class='postdate'>Posted: " + dt.toString() + "</span>\n";
+						html += "\t\t<p class='postdate'>Posted: " + dt.toString() + "</p>\n";
 					}
+
 					if (dobj.story)
-						html += "<div apptype='story'><p class='newstitle'>" + dobj.story + "</p></div>\n";
-					else
-						html += "<BR>\n";
-					if (dobj.link && (dobj.type == "photo" || dobj.type == "link"))
+						html += "<p class='newstitle'>" + dobj.story + "</p>\n";
+
+					if (dobj.message)
 					{
-						if (dobj.picture && dobj.status_type !== "shared_story")
-							picture = "<img src='"+dobj.picture+"'>";
-						else if (dobj.name)
-							picture = dobj.name;
-						else
-							picture = "picture link";
-						html += "<div apptype='photo'><a target='_blank' href='"+dobj.link+"'>" + picture + "</a></div>\n";
+						var msg = dobj.message.replaceAll('\\n', '<BR>');
+						html += "<p>" + msg + "</p>\n";
 					}
 					if (dobj.description)
 					{
 						var desc = dobj.description.replaceAll('\\n', '<BR>');
-						html += "<div apptype='description'><p>" + desc + "</p></div>\n";
-					}
-					if (dobj.message)
-					{
-						var msg = dobj.message.replaceAll('\\n', '<BR>');
-						html += "<div apptype='message'><p>" + msg + "</p></div>\n";
+						html += "<p>" + desc + "</p>\n";
 					}
 					if (dobj.source)
-						html += "<div apptype='source'><a href='"+dobj.source+"'>" + dobj.source + "</a></div>\n";
+						html += "<a href='"+dobj.source+"'>" + dobj.source + "</a><BR>\n";
 					html += "<BR>\n";
 				}
 			});
+						html += "\t<p style='clear:both;'></p>\n";
+						html += "\t<HR>\n";
 			html += "</div>\n";
 		}
 		else if (data.error)

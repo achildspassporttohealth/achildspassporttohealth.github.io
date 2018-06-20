@@ -81,3 +81,5 @@ body { background-image: none; }
 	margin: 10px;
 	padding: 10px;
 }
+.newsfeedimg { width: 360px; margin:0 10px; }
+.imgsep { clear:both; display:block; }

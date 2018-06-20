@@ -126,6 +126,9 @@ article { padding: 60px 20px 10px 20px; }
 .kids_container .kids.eight .content { padding: 170px 10px 0 0; }
 .kids_container .kids.nine .content { padding: 170px 10px 0 0; }
 
+.newsfeedimg { width: 320px; margin:0 10px; }
+.imgsep { display:none; }
+
 
 /*.memorium_container .memorium .content { padding: 0 30px 0 70px; }*/
 

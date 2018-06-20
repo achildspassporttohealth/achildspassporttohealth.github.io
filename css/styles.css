@@ -266,15 +266,19 @@ a.cta:hover {
 }
 
 .news div {
-	width: 80%;
+	/*width: 80%;*/
 	margin: 0 auto;
+}
+
+.news div {
+	padding: 10px;
 }
 
 .postdate {
 	display: block;
 	font-size: .7em;
-	width: 80%;
-	margin: 0 auto;
+	/*width: 80%;*/
+	margin: 0;
 }
 
 .newstitle {
