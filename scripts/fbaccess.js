@@ -40,5 +40,9 @@ var pageid = "1687150331514073";
 //var expires = "1522281600";
 
 // expires August 18th, 2018 - edited by vince
-var accesstoken = "EAAJF9t0Lm18BACAdzhCePL1jxpv0S38OVDScgomdQ98G2IApQnkG4dabOQmrh0UI9LZBu9QQJasqrDETB8v4ctR1MF5a1GEswTln2Fo77ZChR7hQXpNyikU2hPKtXXqSD2MBW6IZBrLoCyG6gXghNVdX3a90UWYGOkLoX14aAZDZD";
-var expires = "1529384400";
+//var accesstoken = "EAAJF9t0Lm18BACAdzhCePL1jxpv0S38OVDScgomdQ98G2IApQnkG4dabOQmrh0UI9LZBu9QQJasqrDETB8v4ctR1MF5a1GEswTln2Fo77ZChR7hQXpNyikU2hPKtXXqSD2MBW6IZBrLoCyG6gXghNVdX3a90UWYGOkLoX14aAZDZD";
+//var expires = "1529384400";
+
+// expires September 16th, 2018 - edited by vince
+var accesstoken = "AJF9t0Lm18BAKBT9N5VKrCkvbEZCZB0M7JLg25jQghAIwqWJYkZBxh6ZCZAsAVAybMnBN9dWt5dvgY6FwmkYXug3p55Gn61a3olhyGWTnq53ZCh7MURQ09qjxIdIRg5y1w2OraF4R4iGNrWVZAZBVjw9KpkVHrpmysZD";
+var expires = "1535335200";
